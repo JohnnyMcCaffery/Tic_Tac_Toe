@@ -1,5 +1,29 @@
 # Play Tic Tac Toc in your terminal
 
- - The game was built using a 2d array
- - You enter a number from 1 - 9 and the code does the rest
- - X is blue and O is red
+ - The game is built using a 2d array
+ - Each array contains a set of numbers
+   ```
+         |     |     
+      1  |  2  |  3  
+    _____|_____|_____
+         |     |     
+      4  |  5  |  6  
+    _____|_____|_____
+         |     |     
+      7  |  8  |  9  
+         |     |    
+    ```
+
+ - Type a number to select your postion
+  - Note: In the game, X is <span style="color:blue">blue</span> and O are <span style="color:red">red</span>
+   ```
+         |     |     
+      X  |  X  |  3  
+    _____|_____|_____
+         |     |     
+      4  |  O  |  6  
+    _____|_____|_____
+         |     |     
+      7  |  0  |  X  
+         |     |    
+    ```
