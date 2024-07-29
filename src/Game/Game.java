@@ -48,9 +48,9 @@ public class Game extends CheckWhoHasWon {
 
     private void doYouWantToPlayAgain(){
         System.out.println("\n\nDo you want to play again? (y/n): ");
-        String yOrN = scanner.next();
+        String yOrN = scanner.next().toLowerCase();
 
-        if(yOrN.equals("y")){
+        if(!yOrN.equals("n")){
             resetGame();
             runGame();
         }

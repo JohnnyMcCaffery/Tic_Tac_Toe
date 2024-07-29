@@ -52,19 +52,40 @@ public class CheckWhoHasWon extends GameVariables {
         }
     }
 
-    private void endTheGame(){
+    private void endTheGame(String message){
         hasGameEnded = true;
         drawTheBoard();
+        drawBoxWithMessage(message);
+    }
+
+    String drawLineForBox(int messageLength){
+
+        String line = "  ";
+
+        messageLength = messageLength == 36 ? 27 : messageLength;
+
+        for(int i = 0; i < messageLength; i++){
+            line = line+"-";
+        }
+
+        return line;
+    }
+
+    private void drawBoxWithMessage(String message){
+        System.out.println(drawLineForBox(message.length()));
+        System.out.println(message);
+        System.out.println(drawLineForBox(message.length()));
     }
 
     private void showWinningGameMessage(){
-        endTheGame();
-        System.out.println("\n "+activeUser+" has won the game!");
+        String message = "    | "+activeUser+" has won the game! |";
+        endTheGame(message);
+
     }
 
     private void showEndGameMessage(){
-        endTheGame();
-        System.out.println("\n Stalemate!  The game is over");
+        String message = "    | Stalemate! game is over! |";
+        endTheGame(message);
     }
 
     private void changeUser(){
