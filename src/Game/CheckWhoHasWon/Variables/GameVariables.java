@@ -9,6 +9,9 @@ public class GameVariables {
     protected final String oUser = setUser("31mO");
     protected final Scanner scanner = new Scanner(System.in);
 
+    protected int xGames = 0;
+    protected int oGames = 0;
+
     protected String[][] board;
     protected String activeUser;
     protected Boolean hasGameEnded;
@@ -32,12 +35,11 @@ public class GameVariables {
     }
 
     protected void drawTheBoard(){
-        System.out.println();
-        System.out.println("\t  "+board[0][0]+" | "+board[0][1]+" | "+board[0][2]);
+        System.out.println("\n\t "+xUser+ ": "+xGames+" | "+oUser+": "+oGames);
+        System.out.println("\n\n\t  "+board[0][0]+" | "+board[0][1]+" | "+board[0][2]);
         System.out.println("\t ---+---+---");
         System.out.println("\t  "+board[1][0]+" | "+board[1][1]+" | "+board[1][2]);
         System.out.println("\t ---+---+---");
-        System.out.println("\t  "+board[2][0]+" | "+board[2][1]+" | "+board[2][2]);
-        System.out.println();
+        System.out.println("\t  "+board[2][0]+" | "+board[2][1]+" | "+board[2][2]+"\n\n");
     }
 }

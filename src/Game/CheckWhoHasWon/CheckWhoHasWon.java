@@ -77,7 +77,15 @@ public class CheckWhoHasWon extends GameVariables {
         System.out.println(drawLineForBox(message.length()));
     }
 
+    private void updateGamesWon(){
+        if(activeUser.equals(xUser))
+            xGames++;
+        else 
+            oGames++;
+    }
+
     private void showWinningGameMessage(){
+        updateGamesWon();
         String message = "    | "+activeUser+" has won the game! |";
         endTheGame(message);
 
