@@ -52,13 +52,18 @@ public class CheckWhoHasWon extends GameVariables {
         }
     }
 
-    private void showWinningGameMessage(){
+    private void endTheGame(){
         hasGameEnded = true;
+        drawTheBoard();
+    }
+
+    private void showWinningGameMessage(){
+        endTheGame();
         System.out.println("\n "+activeUser+" has won the game!");
     }
 
     private void showEndGameMessage(){
-        hasGameEnded = true;
+        endTheGame();
         System.out.println("\n Stalemate!  The game is over");
     }
 
