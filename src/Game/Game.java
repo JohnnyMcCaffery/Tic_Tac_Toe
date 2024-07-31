@@ -4,8 +4,23 @@ import Game.CheckWhoHasWon.CheckWhoHasWon;
 
 public class Game extends CheckWhoHasWon {
 
+    public void gameOpening(){
+        String dashLine = "-------------------------------------";
+
+        System.out.println("\n\t"+dashLine);
+        System.out.println("\t | What game do you want to play?  |");
+        System.out.println("\t"+dashLine);
+        System.out.println("\t | 1: Tic Tac Toe                  |");
+        System.out.println("\t | 2: Plus One                     |");
+        System.out.println("\t"+dashLine);
+        int gameSelector = scanner.nextInt();
+
+        plusOne =  gameSelector == 2 ? true : false;
+    }
+
     public void runGame(){
 
+        gameOpening();
         resetGame();
         whoWantsToGoFirst();
 
@@ -22,7 +37,15 @@ public class Game extends CheckWhoHasWon {
         while(selectedNumber == 10) {
             System.out.print("(" + activeUser + ") Please select your number:\t");
             if(scanner.hasNextInt()){
-                selectedNumber = scanner.nextInt() -1;
+
+                int num = scanner.nextInt();
+
+                if(plusOne) {
+                    if(num == 9) num = 0;
+                    selectedNumber = num;
+                 } else {
+                    selectedNumber = num -1;
+                 }
 
 
                 int board1 = selectedNumber / 3;
@@ -44,7 +67,7 @@ public class Game extends CheckWhoHasWon {
     }
 
     private void whoWantsToGoFirst(){
-        System.out.println("\nWho wants to go first? (X or O) ");
+        System.out.println("\nWho wants to go first? ("+xUser+" or "+oUser+") ");
         String xOrO = scanner.next().toLowerCase();
 
         activeUser = xOrO.equals("x") ? xUser : oUser;

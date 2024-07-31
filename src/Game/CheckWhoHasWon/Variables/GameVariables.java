@@ -11,6 +11,7 @@ public class GameVariables {
 
     protected int xGamesWon = 0;
     protected int oGamesWon = 0;
+    protected Boolean plusOne = false;
 
     protected String[][] board;
     protected String activeUser;
