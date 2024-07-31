@@ -79,9 +79,9 @@ public class CheckWhoHasWon extends GameVariables {
 
     private void updateGamesWon(){
         if(activeUser.equals(xUser))
-            xGames++;
+            xGamesWon++;
         else 
-            oGames++;
+            oGamesWon++;
     }
 
     private void showWinningGameMessage(){
@@ -92,7 +92,7 @@ public class CheckWhoHasWon extends GameVariables {
     }
 
     private void showEndGameMessage(){
-        String message = "    | Stalemate! game is over! |";
+        String message = "    | Stalemate! Gameover! |";
         endTheGame(message);
     }
 

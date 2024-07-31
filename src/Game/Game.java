@@ -7,15 +7,12 @@ public class Game extends CheckWhoHasWon {
     public void runGame(){
 
         resetGame();
+        whoWantsToGoFirst();
 
         while(!hasGameEnded){
-
             drawTheBoard();
-
             checkUserInput();
-
             checkIfUserHasWon();
-
         }
 
         doYouWantToPlayAgain();
@@ -44,6 +41,13 @@ public class Game extends CheckWhoHasWon {
                 scanner.next();
             }
         }
+    }
+
+    private void whoWantsToGoFirst(){
+        System.out.println("\nWho wants to go first? (X or O) ");
+        String xOrO = scanner.next().toLowerCase();
+
+        activeUser = xOrO.equals("x") ? xUser : oUser;
     }
 
     private void doYouWantToPlayAgain(){
