@@ -28,6 +28,6 @@
          |     |    
     ```
 
-    ## TIC TAC TOE PLUS 1
+## TIC TAC TOE PLUS 1
 
-     * The number you select will be incremented by one so you have to think a head.
+   * The number you select will be incremented by one so you have to think a head.
