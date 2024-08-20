@@ -15,7 +15,7 @@
     ```
 
  - Type a number to select your postion
-  - Note: In the game, X is <span style="color:blue">blue</span> and O are <span style="color:red">red</span>
+ - Note: In the game, X is blue and O are red
    ```
          |     |     
       X  |  X  |  3  
@@ -26,8 +26,8 @@
          |     |     
       7  |  O  |  X  
          |     |    
-    ```
+   ```
 
 ## TIC TAC TOE PLUS 1
 
-   * The number you select will be incremented by one so you have to think a head.
+   * The number you select will be incremented by one, so you have to think a head.
