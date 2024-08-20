@@ -5,17 +5,18 @@ import Game.CheckWhoHasWon.CheckWhoHasWon;
 public class Game extends CheckWhoHasWon {
 
     public void gameOpening(){
-        String dashLine = "-------------------------------------";
+        String dashLine = "--------------------------------";
 
         System.out.println("\n\t"+dashLine);
-        System.out.println("\t | What game do you want to play?  |");
+        System.out.println("\t | Pick your game             |");
         System.out.println("\t"+dashLine);
-        System.out.println("\t | 1: Tic Tac Toe                  |");
-        System.out.println("\t | 2: Plus One                     |");
+        System.out.println("\t | 1: Tic Tac Toe             |");
+        System.out.println("\t | 2: Plus One                |");
         System.out.println("\t"+dashLine);
+        System.out.print("\n\tWhat game do you want to play? ");
         int gameSelector = scanner.nextInt();
 
-        plusOne =  gameSelector == 2 ? true : false;
+        plusOne = gameSelector == 2;
     }
 
     public void runGame(){
