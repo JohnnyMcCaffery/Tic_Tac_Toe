@@ -31,3 +31,6 @@
 ## TIC TAC TOE PLUS 1
 
    * The number you select will be incremented by one, so you have to think a head.
+
+### TIC TAC TOE MINUS 1
+   * The number you select will be decremented by one, so you have to think a head.
