@@ -12,11 +12,13 @@ public class Game extends CheckWhoHasWon {
         System.out.println("\t"+dashLine);
         System.out.println("\t | 1: Tic Tac Toe             |");
         System.out.println("\t | 2: Plus One                |");
+        System.out.println("\t | 3: Minus One               |");
         System.out.println("\t"+dashLine);
         System.out.print("\n\tWhat game do you want to play? ");
         int gameSelector = scanner.nextInt();
 
         plusOne = gameSelector == 2;
+        minusOne = gameSelector == 3;
     }
 
     public void runGame(){
@@ -43,10 +45,16 @@ public class Game extends CheckWhoHasWon {
 
                 if(plusOne) {
                     if(num == 9) num = 0;
-                    selectedNumber = num;
-                 } else {
-                    selectedNumber = num -1;
+                 } else if (minusOne) {
+                     if(num == 1) num = 8;
+                     else num = num -2;
+
+                     
+                 }else {
+                    num = num -1;
                  }
+
+                selectedNumber = num;
 
 
                 int board1 = selectedNumber / 3;
